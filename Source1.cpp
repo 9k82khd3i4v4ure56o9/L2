@@ -23,12 +23,10 @@ double f(double x, int n)
 	}
 
 	double pre_p = f(x, n - 1);
-
 	double p = (2 * n + 1) / fact(n) * pow(x, 2 * n);
-
 	cout << n << "-е слагаемое = " << p << endl;
-
-	return pre_p + p;
+	double result = pre_p + p;
+	return result;
 }
 
 int X, N;
@@ -46,8 +44,7 @@ int main()
 	}
 
 	double result = f(X, N);
-
 	cout << result;
-	
 	return 0;
 }
+
